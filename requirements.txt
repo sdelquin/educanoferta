@@ -3,3 +3,4 @@ bs4
 prettyconf
 pypdf2
 logzero
+typer

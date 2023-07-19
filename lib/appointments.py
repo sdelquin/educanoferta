@@ -102,7 +102,10 @@ class EduGroup:
     def get_offers(self):
         logger.info('Getting appointment offers')
         for offer_node in reversed(self.soup.find_all('li', class_='enlace-con-icono documento')):
-            yield Offer(offer_node)
+            try:
+                yield Offer(offer_node)
+            except Exception as err:
+                logger.exception(err)
 
     def __str__(self):
         return self.name

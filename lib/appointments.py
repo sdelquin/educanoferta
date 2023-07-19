@@ -101,7 +101,7 @@ class EduGroup:
 
     def get_offers(self):
         logger.info('Getting appointment offers')
-        for offer_node in self.soup.find_all('li', class_='enlace-con-icono documento'):
+        for offer_node in reversed(self.soup.find_all('li', class_='enlace-con-icono documento')):
             yield Offer(offer_node)
 
     def __str__(self):

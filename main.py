@@ -14,6 +14,9 @@ app = typer.Typer(add_completion=False)
 
 @app.command()
 def run(
+    disable_notifications: bool = typer.Option(
+        False, '--disable-notifications', '-x', help='Disable notifications'
+    ),
     loglevel: str = typer.Option(
         'DEBUG', '--loglevel', '-l', help='Log level (debug, info, error)'
     ),
@@ -22,7 +25,7 @@ def run(
 
     logger.setLevel(getattr(logzero, loglevel.upper()))
     manager = Manager()
-    manager.dispatch()
+    manager.dispatch(not disable_notifications)
 
 
 @app.command()

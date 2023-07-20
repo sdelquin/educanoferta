@@ -26,11 +26,12 @@ def run(
 
 
 @app.command()
-def clear():
-    '''Clear archive database.'''
-    if typer.confirm('Are you sure to delete archive database?'):
+def clean(force: bool = typer.Option(False, '--force', '-f', help='Force clean. No confirmation!')):
+    '''Clean archive database.'''
+    if force or typer.confirm('Are you sure to delete archive database?'):
         for file_path in glob.glob(str(settings.ARCHIVE_DB_PATH) + '*'):
             os.remove(file_path)
+        logger.info('🧽 DB is clean!')
 
 
 if __name__ == "__main__":

@@ -10,6 +10,7 @@ from logzero import logger
 
 import settings
 from lib import db, utils
+from lib.notification import TelegramBot
 
 
 class Speciality:
@@ -23,19 +24,22 @@ class Speciality:
         return False
 
     def __repr__(self):
-        return f'{self.code} {self.name}'
+        return f'({self.code}) {self.name}'
 
 
 class Offer:
     archive = shelve.open(settings.ARCHIVE_DB_PATH)
+    tgbot = TelegramBot()
 
     def __init__(self, node: bs4.element.Tag):
         logger.info('🧱 Building appointment offer')
+
         offer_link = node.h4.a
         self.url = utils.build_absolute_url(offer_link['href'])
-        self.name = offer_link.text.strip()
+        self.name = re.sub(r'\[\s*?([\d\/]+)\s*\]?', r'\1', offer_link.text.strip())
         logger.debug(f'🏄‍♂️ {self.url}')
         logger.debug(f'Name: {self.name}')
+
         self.download_offer()
         self.specialities = self.extract_specialities()
 
@@ -70,16 +74,23 @@ class Offer:
         return sorted(valid_specialities)
 
     @property
-    def already_notified(self) -> bool:
+    def already_dispatched(self) -> bool:
         return self.archive.get(self.id) is not None
 
     @property
     def id(self) -> str:
         return self.url
 
-    def save(self):
+    @property
+    def as_markdown(self) -> str:
+        return utils.render_message(settings.APPOINTMENT_TMPL_NAME, offer=self)
+
+    def save(self) -> None:
         logger.debug('💾 Saving appointment offer')
         self.archive[self.id] = True
+
+    def notify(self, telegram_chat_id: str = settings.TELEGRAM_CHAT_ID) -> None:
+        self.tgbot.send(telegram_chat_id, self.as_markdown)
 
     def __str__(self):
         return self.name
@@ -132,7 +143,8 @@ class Manager:
             group_url = utils.build_absolute_url(group.a['href'])
             edugroup = EduGroup(group_url)
             for offer in edugroup:
-                if offer.already_notified:
-                    logger.warning('🚫 Offer already notified. Discarding!')
+                if offer.already_dispatched:
+                    logger.warning('🚫 Offer already dispatched. Discarding!')
                 else:
+                    offer.notify()
                     offer.save()

@@ -38,10 +38,10 @@ class Offer:
 
         self.edugroup = edugroup
         offer_link = node.h4.a
-        self.url = utils.build_absolute_url(offer_link['href'])
         self.name = re.sub(r'\[\s*?([\d\/]+)\s*\]?', r'\1', offer_link.text.strip())
-        logger.debug(f'🏄‍♂️ {self.url}')
-        logger.debug(f'Name: {self.name}')
+        self.url = utils.build_absolute_url(offer_link['href'])
+        logger.debug(f'🔵 {self.name}')
+        logger.debug(f'{self.url}')
 
         self.download_offer()
         self.specialities = self.extract_specialities()
@@ -140,7 +140,7 @@ class Manager:
         logger.debug('Creating the beautiful soup')
         self.soup = BeautifulSoup(response.content, 'html.parser')
 
-    def dispatch(self):
+    def dispatch(self, notify: bool = True):
         logger.debug('Dispatching educational teacher groups')
         for group in self.soup.find_all('h4'):
             group_url = utils.build_absolute_url(group.a['href'])
@@ -149,5 +149,8 @@ class Manager:
                 if offer.already_dispatched:
                     logger.warning('🚫 Offer already dispatched. Discarding!')
                 else:
-                    offer.notify()
+                    if notify:
+                        offer.notify()
+                    else:
+                        logger.warning('🔕 Notification disabled by user')
                     offer.save()

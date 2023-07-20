@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import re
 import shelve
 import tempfile
@@ -31,9 +33,10 @@ class Offer:
     archive = shelve.open(settings.ARCHIVE_DB_PATH)
     tgbot = TelegramBot()
 
-    def __init__(self, node: bs4.element.Tag):
+    def __init__(self, node: bs4.element.Tag, edugroup: EduGroup):
         logger.info('🧱 Building appointment offer')
 
+        self.edugroup = edugroup
         offer_link = node.h4.a
         self.url = utils.build_absolute_url(offer_link['href'])
         self.name = re.sub(r'\[\s*?([\d\/]+)\s*\]?', r'\1', offer_link.text.strip())
@@ -114,7 +117,7 @@ class EduGroup:
         logger.info('Getting appointment offers')
         for offer_node in reversed(self.soup.find_all('li', class_='enlace-con-icono documento')):
             try:
-                yield Offer(offer_node)
+                yield Offer(offer_node, self)
             except Exception as err:
                 logger.exception(err)
 

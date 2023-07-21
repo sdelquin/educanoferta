@@ -83,7 +83,9 @@ class Offer:
 
     @property
     def as_markdown(self) -> str:
-        return utils.render_message(settings.APPOINTMENT_TMPL_NAME, offer=self)
+        return utils.render_message(
+            settings.APPOINTMENT_TMPL_NAME, offer=self, hashtag=settings.NOTIFICATION_HASHTAG
+        )
 
     def save(self) -> None:
         logger.debug('💾 Saving appointment offer')

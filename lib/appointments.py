@@ -43,17 +43,14 @@ class Offer:
         logger.debug(f'🔵 {self.name}')
         logger.debug(f'{self.url}')
 
-        self.download_offer()
-        self.specialities = self.extract_specialities()
-
-    def download_offer(self):
+    def download_offer(self) -> None:
         logger.debug('🚀 Downloading appointment offer file')
         response = requests.get(self.url)
         self.filepath = tempfile.NamedTemporaryFile().name
         with open(self.filepath, 'wb') as f:
             f.write(response.content)
 
-    def extract_specialities(self) -> list[Speciality]:
+    def extract_specialities(self) -> None:
         logger.debug('🍿 Extracting specialities')
         speciality_codes = set()
         pdf = PyPDF2.PdfReader(self.filepath)
@@ -65,7 +62,7 @@ class Offer:
                 speciality_codes.add(int(speciality_code))
 
         logger.debug('Filtering valid specialities')
-        valid_specialities = []
+        self.specialities = []
         for speciality_code in speciality_codes:
             try:
                 speciality = Speciality(speciality_code)
@@ -73,8 +70,8 @@ class Offer:
                 logger.error(f'💩 Speciality code {speciality_code} not found in DB')
             else:
                 logger.debug(f'✨ Adding speciality "{speciality}"')
-                valid_specialities.append(speciality)
-        return sorted(valid_specialities)
+                self.specialities.append(speciality)
+        self.specialities.sort()
 
     @property
     def already_dispatched(self) -> bool:
@@ -149,6 +146,8 @@ class Manager:
                 if offer.already_dispatched:
                     logger.warning('🚫 Offer already dispatched. Discarding!')
                 else:
+                    offer.download_offer()
+                    offer.extract_specialities()
                     if notify:
                         offer.notify()
                     else:

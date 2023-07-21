@@ -3,4 +3,4 @@
 .python-version
 *.log*
 .env
-data/archive.dbm
+data/archive.dbm*

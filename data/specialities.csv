@@ -1,226 +1,225 @@
-31;EDUCACIÓN INFANTIL
-32;IDIOMA EXTRANJERO: INGLÉS
-33;IDIOMA EXTRANJERO: FRANCÉS
-34;EDUCACIÓN FÍSICA
-35;MÚSICA
-36;EDUCACIÓN ESPECIAL, PEDAGOGÍA TERAPÉUTICA
-37;AUDICIÓN Y LENGUAJE
-38;EDUCACIÓN PRIMARIA
-39;IDIOMA EXTRANJERO: ALEMÁN
-39;IDIOMA EXTRANJERO: ALEMÁN
-201;FILOSOFÍA
-202;GRIEGO
-203;LATÍN
-204;LENGUA CASTELLANA Y LITERATURA
-205;GEOGRAFÍA E HISTORIA
-206;MATEMÁTICAS
-207;FÍSICA QUÍMICA
-208;BIOLOGÍA Y GEOLOGÍA
-209;DIBUJO
-210;FRANCÉS
-211;INGLÉS
-212;ALEMÁN
-213;ITALIANO
-221;MÚSICA
-222;LATÍN Y GRIEGO (LISTA DE SUSTITUCIÓN)
-244;EDUCACIÓN FÍSICA
-300;TECNOLOGÍA
-301;ECONOMÍA
-302;ÁMBITO CIENTÍFICO-TECNOLÓGICO
-303;ÁMBITO DE CONOCIMIENTO SOCIAL
-308;FORMACIÓN Y ORIENTACIÓN LABORAL
-310;ÁMBITO DE COMUNICACIÓN: INGLÉS
-320;ÁMBITO DE COMUNICACIÓN: LENGUA CASTELLANA Y LITERATURA
-342;PROCESOS EN LA INDUSTRIA ALIMENTARIA
-343;PIA MATADERO: CARNICERÍA-CHARCUTERÍA
-344;PIA ELABORACIÓN DE PRODUCTOS LÁCTEOS
-345;PIA ELABORACIÓN DE VINOS Y OTRAS BEBIDAS
-351;TECNOLOGÍA DE PUENTE
-360;ADMINISTRACIÓN DE EMPRESAS
-361;PROCESOS DE PRODUCCIÓN AGRARIA
-362;PROCESOS Y PRODUCTOS EN ARTES GRÁFICAS
-363;ORGANIZACIÓN Y PROCESOS DE MANTENIMIENTO DE VEHÍCULOS
-364;CONSTRUCCIONES CIVILES Y EDIFICACIÓN
-365;SISTEMAS ELECTROTÉCNICOS Y AUTOMÁTICOS
-366;SISTEMAS ELECTRÓNICOS
-367;HOSTELERÍA Y TURISMO
-368;INFORMÁTICA
-369;PROCESOS Y MEDIOS DE COMUNICACIÓN
-370;PROCESOS Y PRODUCTOS EN MADERA Y MUEBLE
-371;PROCESOS Y PRODUCTOS DE TEXTIL, CONFECCIÓN Y PIEL
-372;ORGANIZACIÓN Y PROYECTOS DE FABRICACIÓN MECÁNICA
-373;ORGANIZACIÓN Y GESTIÓN COMERCIAL
-374;ASESORÍA Y PROCESOS DE IMAGEN PERSONAL
-375;ORGANIZACIÓN Y PROYECTOS DE SISTEMAS ENERGÉTICOS
-376;ANÁLISIS Y QUÍMICA INDUSTRIAL
-377;PROCESOS SANITARIOS
-378;INTERVENCIÓN SOCIOCOMUNITARIA
-380;PROCESS DIAGNÓSTICOS CLÍNICOS Y PRODUCTOS ORTOPROTÉSICOS
-391;NAVEGACIÓN E INSTALACIONES MARINAS
-443;OEE MATADERO Y CARNICERÍA-CHARCUTERÍA
-444;OEE ELABORACIÓN DE PRODUCTOS LÁCTEOS
-445;OEE ELABORACIÓN DE VINOS OTRAS BEBIDAS
-450;OFICINA DE PROYECTOS DE FABRICACIÓN MECÁNICA
-456;OPERACIONES DE PROCESOS
-457;MÁQUINAS, SERVICIOS Y PRODUCCIÓN
-460;PROCESS DE GESTIÓN ADMINISTRATIVA
-461;OPERACIONES Y EQUIPOS DE PRODUCCIÓN AGRARIA
-462;PRODUCCIÓN EN ARTES GRÁFICAS
-463;MANTENIMIENTO DE VEHÍCULOS
-464;OFICINA DE PROYECTOS DE CONSTRUCCIÓN
-465;INSTALACIONES ELECTROTÉCNICAS
-466;EQUIPOS ELECTRÓNICOS
-468;SISTEMAS Y APLICACIONES INFORMÁTICAS
-469;TÉCNICAS Y PROCEDIMIENTOS DE IMAGEN Y SONIDO
-470;FABRICACIÓN E INSTALACIÓN DE CARPINTERÍA Y MUEBLE
-471;PATRONAJE Y CONFECCIÓN
-472;SOLDADURA
-473;PROCESS COMERCIALES
-474;PELUQUERÍA
-475;INSTALACIÓN Y MANTENIMIENTO DE EQUIPOS TÉRMICOS DE FLUÍDOS
-476;LABORATORIO
-477;PROCEDIMIENTOS SANITARIOS Y ASISTENCIALES
-478;SERVICIOS A LA COMUNIDAD
-487;MECANIZADO Y MANTENIMIENTO DE MÁQUINAS
-488;ESTÉTICA
-489;PROCEDIMIENTOS DE DIAGNÓSTICOS CLÍNICOS Y ORTOPROTÉSICO
-495;SERVICIOS DE RESTAURACIÓN
-496;COCINA Y PASTELERÍA
-507;DIBUJO TÉCNICO
-508;ORGANIZACIÓN INDUSTRIAL Y LEGISLACIÓN
-509;DIBUJO ARTÍSTICO Y COLOR
-510;HISTORIA DEL ARTE
-511;MATERIALES Y TECNOLOGÍA: DISEÑO
-512;VOLUMEN
-513;DISEÑO GRÁFICO
-514;DISEÑO DE INTERIORES
-515;MEDIOS INFORMÁTICOS
-516;FOTOGRAFÍA
-518;MEDIOS AUDIOVISUALES
-522;DISEÑO DE MODA
-604;TÉCNICAS DEL METAL
-606;MOLDES Y REPRODUCCIONES
-607;TÉCNICAS MURALES
-608;TÉCNICAS DE PATRONAJE Y CONFECCIÓN
-609;TÉCNICAS DE JOYERÍA Y BISUTERÍA
-610;TÉCNICAS TEXTILES
-614;TALLA EN PIEDRA Y MADERA
-617;TÉCNICAS CERÁMICAS
-618;EBANISTERÍA ARTÍSTICA
-619;FOTOGRAFÍA Y PROCESOS DE REPRODUCCIÓN
-620;MODELISMO Y MAQUETISMO
-631;EBANISTERIA
-632;TEXTILES ARTÍSTICOS
-698;BAJO ELÉCTRICO (P)
-699;GUITARRA ELÉCTRICA (P)
-701;FRANCÉS (E.O.I.)
-702;INGLÉS (E.O.I.)
-703;ALEMÁN (E.O.I.)
-704;ITALIANO (E.O.I.)
-705;ESPAÑOL PARA EXTRANJERO (E.O.I.)
-706;CHINO (E.O.I.)
-707;RUSO (E.O.I.)
-708;ARABE (E.O.I.)
-711;ACORDEÓN (S)
-712;ACÚSTICA (S)
-713;ARMONÍA Y CONTRAPUNTO (S)
-714;ARPA (S)
-715;CANTO (S)
-716;CLARINETE (S)
-717;COMPOSICIÓN (S)
-718;CÁMARA (S)
-719;CONTRABAJO (S)
-720;DANZA (S)
-722;FAGOT (S)
-723;FLAUTA TRAVESERA (S)
-724;DIDÁCTICA DE LA GUITARRA (S)
-726;DIDÁCTICA DE LA TROMPA (S)
-727;GUITARRA (S)
-728;DIDÁCTICA DE LA TROMPETA(S)
-730;OBOE (S)
-732;PEDAGOGÍA MUSICAL (S)
-733;PERCUSIÓN (S)
-734;PIANO (S)
-735;PIANO ACOMPAÑANTE (S)
-736;SAXOFÓN (S)
-738;PIANO COMPLEMENTARIO (S)
-739;TROMBÓN (S)
-740;TROMPA (S)
-741;TROMPETA (S)
-742;TUBA (S)
-743;VIOLA (S)
-744;VIOLÍN (S)
-745;VIOLONCELLO (S)
-747;DIRECCIÓN CORAL (S)
-749;DIDÁCTICA DEL CANTO (S)
-756;DIDÁCTICA DEL PIANO (S)
-758;DIDÁCTICA DEL TROMBÓN (S)
-759;DIDÁCTICA DEL VIOLÍN (S)
-760;DIDÁCTICA DEL VIOLONCELLO (S)
-761;DIDÁCTICA DEL CLARINETE (S)
-762;TECNOLOGÍA MUSICAL (S)
-763;DIRECCIÓN INSTRUMENTAL (S)
-764;EDUCACIÓN AUDITIVA (S)
-766;IDIOMAS (S)
-767;IMPROVISACIÓN (S)
-769;MECÁNICA (ARPA) (S)
-772;CLAVE (S)
-773;FUNDAMENTOS DE LUTHERÍA (S)
-774;IMPROVISACIÓN Y ACOMPAÑAMIENTO (S)
-775;ANÁLISIS (S)
-776;ARTE DRAMÁTICO (S)
-778;MECÁNICA (PIANO) (S)
-779;PEDAGOGÍA GENERAL (S)
-783;MÚSICA CONTEMPORÁNEA (S)
-784;MUSICOLOGÍA (S)
-785;ORGANERÍA (S)
-786;TÉCNICAS DE RESPIRACIÓN (S)
-787;TÉCNICAS DEL MOVIMIENTO (S)
-788;JAZZ PIANO
-790;EL LENGUAJE DEL JAZZ (S)
-793;APROXIMACIÓN A LA MÚSICA E INSTRUMENTOS TRADICIONALES DE CANARIAS
-794;COMUNICACIÓN ORAL (S)
-796;GUITARRA ELÉCTRICA (S)
-811;ACORDEÓN
-812;ACÚSTICA
-813;FUNDAMENTOS DE COMPOSICIÓN
-814;ARPA
-815;CANTO
-816;CLARINETE
-817;CLAVE
-818;CORO
-819;CONTRABAJO
-820;ESTÉTICA, HISTORIA DE LA MÚSICA, DE A CULTURA Y DEL ARTE
-821;EXPRESIÓN CORPORAL
-822;FAGOT
-823;FLAUTA TRAVESERA
-824;FOLCLORE
-827;GUITARRA
-829;MÚSICA DE CÁMARA
-830;OBOE
-831;ÓRGANO
-832;PEDAGOGÍA MUSICAL
-833;PERCUSIÓN
-834;PIANO
-835;PIANO ACOMPAÑANTE
-836;SAXOFÓN
-337;LENGUAJE MUSICAL
-839;TROMBÓN
-840;TROMPA
-841;TROMPETA
-842;TUBA
-843;VIOLA
-844;VIOLÍN
-845;VIOLONCELLO
-846;REPERTORIO DE ÓPERA Y ORATORIO
-848;REPENTIZACIÓN, TRANSPOSICIÓN Y ACOMPAÑAMIENTO
-849;FRANCÉS (CONSERV.)
-851;ALEMÁN (CONSERV.)
-852;ITALIANO (CONSERV.)
-860;HISTORIA DE LA MÚSICA
-862;TIMPLE
-882;INSTRUMENTOS DE PÚA
-910;ORIENTACIÓN EDUCATIVA
-911;LOGOPEDIA
-925;ESPECIALISTA BUCEO
-929;ESPECIALISTA EN COORDINACIÓN DE EMERGENCIAS Y PROTECCIÓN CIVIL
+31;Educación infantil
+32;Idioma extranjero: Inglés
+33;Idioma extranjero: Francés
+34;Educación física
+35;Música
+36;Educación especial, Pedagogía terapéutica
+37;Audición y lenguaje
+38;Educación primaria
+39;Idioma extranjero: Alemán
+201;Filosofía
+202;Griego
+203;Latín
+204;Lengua castellana y Literatura
+205;Geografía e Historia
+206;Matemáticas
+207;Física y Química
+208;Biología y Geología
+209;Dibujo
+210;Francés
+211;Inglés
+212;Alemán
+213;Italiano
+221;Música
+222;Latín y Griego (lista de sustitución)
+244;Educación física
+300;Tecnología
+301;Economía
+302;Ámbito científico-tecnológico
+303;Ámbito de conocimiento social
+308;Formación y orientación laboral
+310;Ámbito de comunicación: Inglés
+320;Ámbito de comunicación: Lengua castellana y Literatura
+342;Procesos en la industria alimentaria
+343;PIA Matadero: carnicería-charcutería
+344;PIA Elaboración de productos lácteos
+345;PIA Elaboración de vinos y otras bebidas
+351;Tecnología de puente
+360;Administración de empresas
+361;Procesos de producción agraria
+362;Procesos y productos en artes gráficas
+363;Organización y procesos de mantenimiento de vehículos
+364;Construcciones civiles y edificación
+365;Sistemas electrotécnicos y automáticos
+366;Sistemas electrónicos
+367;Hostelería y Turismo
+368;Informática
+369;Procesos y medios de comunicación
+370;Procesos y productos en madera y mueble
+371;Procesos y productos de textil, confección y piel
+372;Organización y proyectos de fabricación mecánica
+373;Organización y gestión comercial
+374;Asesoría y procesos de imagen personal
+375;Organización y proyectos de sistemas energéticos
+376;Análisis y Química industrial
+377;Procesos sanitarios
+378;Intervención sociocomunitaria
+380;Process diagnósticos clínicos y productos ortoprotésicos
+391;Navegación e Instalaciones marinas
+443;OEE Matadero y Carnicería-Charcutería
+444;OEE Elaboración de productos lácteos
+445;OEE Elaboración de vinos otras bebidas
+450;Oficina de proyectos de fabricación mecánica
+456;Operaciones de procesos
+457;Máquinas, servicios y producción
+460;Process de gestión administrativa
+461;Operaciones y Equipos de producción agraria
+462;Producción en Artes gráficas
+463;Mantenimiento de vehículos
+464;Oficina de proyectos de construcción
+465;Instalaciones electrotécnicas
+466;Equipos electrónicos
+468;Sistemas y aplicaciones informáticas
+469;Técnicas y procedimientos de imagen y sonido
+470;Fabricación e instalación de carpintería y mueble
+471;Patronaje y confección
+472;Soldadura
+473;Process comerciales
+474;Peluquería
+475;Instalación y mantenimiento de equipos térmicos de fluídos
+476;Laboratorio
+477;Procedimientos sanitarios y asistenciales
+478;Servicios a la comunidad
+487;Mecanizado y mantenimiento de máquinas
+488;Estética
+489;Procedimientos de diagnósticos clínicos y ortoprotésico
+495;Servicios de restauración
+496;Cocina y Pastelería
+507;Dibujo técnico
+508;Organización industrial y legislación
+509;Dibujo artístico y color
+510;Historia del arte
+511;Materiales y tecnología: diseño
+512;Volumen
+513;Diseño gráfico
+514;Diseño de interiores
+515;Medios informáticos
+516;Fotografía
+518;Medios audiovisuales
+522;Diseño de moda
+604;Técnicas del metal
+606;Moldes y reproducciones
+607;Técnicas murales
+608;Técnicas de patronaje y confección
+609;Técnicas de joyería y bisutería
+610;Técnicas textiles
+614;Talla en piedra y madera
+617;Técnicas cerámicas
+618;Ebanistería artística
+619;Fotografía y procesos de reproducción
+620;Modelismo y maquetismo
+631;Ebanisteria
+632;Textiles artísticos
+698;Bajo eléctrico (P)
+699;Guitarra eléctrica (P)
+701;Francés (EOI)
+702;Inglés (EOI)
+703;Alemán (EOI)
+704;Italiano (EOI)
+705;Español para extranjero (EOI)
+706;Chino (EOI)
+707;Ruso (EOI)
+708;Arabe (EOI)
+711;Acordeón (S)
+712;Acústica (S)
+713;Armonía y contrapunto (S)
+714;Arpa (S)
+715;Canto (S)
+716;Clarinete (S)
+717;Composición (S)
+718;Cámara (S)
+719;Contrabajo (S)
+720;Danza (S)
+722;Fagot (S)
+723;Flauta travesera (S)
+724;Didáctica de la guitarra (S)
+726;Didáctica de la trompa (S)
+727;Guitarra (S)
+728;Didáctica de la trompeta(S)
+730;Oboe (S)
+732;Pedagogía musical (S)
+733;Percusión (S)
+734;Piano (S)
+735;Piano acompañante (S)
+736;Saxofón (S)
+738;Piano complementario (S)
+739;Trombón (S)
+740;Trompa (S)
+741;Trompeta (S)
+742;Tuba (S)
+743;Viola (S)
+744;Violín (S)
+745;Violoncello (S)
+747;Dirección coral (S)
+749;Didáctica del canto (S)
+756;Didáctica del piano (S)
+758;Didáctica del trombón (S)
+759;Didáctica del violín (S)
+760;Didáctica del violoncello (S)
+761;Didáctica del clarinete (S)
+762;Tecnología musical (S)
+763;Dirección instrumental (S)
+764;Educación auditiva (S)
+766;Idiomas (S)
+767;Improvisación (S)
+769;Mecánica (Arpa) (s)
+772;Clave (S)
+773;Fundamentos de luthería (S)
+774;Improvisación y acompañamiento (S)
+775;Análisis (S)
+776;Arte dramático (S)
+778;Mecánica (Piano) (s)
+779;Pedagogía general (S)
+783;Música contemporánea (S)
+784;Musicología (S)
+785;Organería (S)
+786;Técnicas de respiración (S)
+787;Técnicas del movimiento (S)
+788;Jazz piano
+790;El lenguaje del jazz (S)
+793;Aproximación a la música e instrumentos tradicionales de canarias
+794;Comunicación oral (S)
+796;Guitarra eléctrica (S)
+811;Acordeón
+812;Acústica
+813;Fundamentos de composición
+814;Arpa
+815;Canto
+816;Clarinete
+817;Clave
+818;Coro
+819;Contrabajo
+820;Estética, historia de la música, de la cultura y del arte
+821;Expresión corporal
+822;Fagot
+823;Flauta travesera
+824;Folclore
+827;Guitarra
+829;Música de cámara
+830;Oboe
+831;Órgano
+832;Pedagogía musical
+833;Percusión
+834;Piano
+835;Piano acompañante
+836;Saxofón
+337;Lenguaje musical
+839;Trombón
+840;Trompa
+841;Trompeta
+842;Tuba
+843;Viola
+844;Violín
+845;Violoncello
+846;Repertorio de ópera y oratorio
+848;Repentización, transposición y acompañamiento
+849;Francés (Conserv.)
+851;Alemán (Conserv.)
+852;Italiano (Conserv.)
+860;Historia de la música
+862;Timple
+882;Instrumentos de púa
+910;Orientación educativa
+911;Logopedia
+925;Especialista buceo
+929;Especialista en coordinación de emergencias y protección civil

@@ -30,13 +30,18 @@
 308;Formación y orientación laboral
 310;Ámbito de comunicación: Inglés
 320;Ámbito de comunicación: Lengua castellana y Literatura
+336;Operaciones y equipos de elaboración de productos alimentarios
+338;Operaciones de procesos
 342;Procesos en la industria alimentaria
 343;PIA Matadero: carnicería-charcutería
 344;PIA Elaboración de productos lácteos
 345;PIA Elaboración de vinos y otras bebidas
-351;Tecnología de puente
+346;Operaciones y Equipos de Producción Agraria
+351;Tecnología de Puente
+352;Sistemas y Aplicaciones Informáticas
+353;Técnicas y procedimientos de Imagen y Sonido
 360;Administración de empresas
-361;Procesos de producción agraria
+361;Procesos de Producción Agraria
 362;Procesos y productos en artes gráficas
 363;Organización y procesos de mantenimiento de vehículos
 364;Construcciones civiles y edificación
@@ -44,21 +49,22 @@
 366;Sistemas electrónicos
 367;Hostelería y Turismo
 368;Informática
-369;Procesos y medios de comunicación
+369;Procesos y Medios de Comunicación
 370;Procesos y productos en madera y mueble
 371;Procesos y productos de textil, confección y piel
-372;Organización y proyectos de fabricación mecánica
+372;Organización y proyectos de Fabricación Mecánica
 373;Organización y gestión comercial
-374;Asesoría y procesos de imagen personal
+374;Asesoría y procesos de Imagen Personal
 375;Organización y proyectos de sistemas energéticos
 376;Análisis y Química industrial
 377;Procesos sanitarios
 378;Intervención sociocomunitaria
 380;Process diagnósticos clínicos y productos ortoprotésicos
-391;Navegación e Instalaciones marinas
+390;Procesos de Cultivo Acuícolas
+391;Navegación e Instalaciones Marinas
 443;OEE Matadero y Carnicería-Charcutería
 444;OEE Elaboración de productos lácteos
-445;OEE Elaboración de vinos otras bebidas
+445;OEE Elaboración de vinos y otras bebidas
 450;Oficina de proyectos de fabricación mecánica
 456;Operaciones de procesos
 457;Máquinas, servicios y producción
@@ -93,7 +99,7 @@
 512;Volumen
 513;Diseño gráfico
 514;Diseño de interiores
-515;Medios informáticos
+515;Medios Informáticos
 516;Fotografía
 518;Medios audiovisuales
 522;Diseño de moda
@@ -110,6 +116,9 @@
 620;Modelismo y maquetismo
 631;Ebanisteria
 632;Textiles artísticos
+651;Mantenimiento de vehículos
+655;Peluquería
+656;Mecanizado y mantenimiento de máquinas
 698;Bajo eléctrico (P)
 699;Guitarra eléctrica (P)
 701;Francés (EOI)
@@ -180,6 +189,8 @@
 793;Aproximación a la música e instrumentos tradicionales de canarias
 794;Comunicación oral (S)
 796;Guitarra eléctrica (S)
+797;Bajo Eléctrico (S)
+799;Piano Jazz (S)
 811;Acordeón
 812;Acústica
 813;Fundamentos de composición

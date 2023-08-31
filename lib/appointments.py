@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import datetime
 import re
 import shelve
 import tempfile
@@ -38,10 +39,17 @@ class Offer:
 
         self.edugroup = edugroup
         offer_link = node.h4.a
-        self.name = re.sub(r'\[\s*?([\d\/]+)\s*\]?', r'\1', offer_link.text.strip())
+        self.date, self.name = self._parse_title(offer_link.text)
         self.url = utils.build_absolute_url(offer_link['href'])
         logger.debug(f'🔵 {self.name}')
         logger.debug(f'{self.url}')
+
+    def _parse_title(self, title: str) -> tuple[str]:
+        if m := re.fullmatch(r'(?:\[(\d{2}/\d{2}/\d{4})\])?\s*(.*)', title.strip()):
+            date = m[1] or datetime.date.today().strfmt('%d/%m/%Y')
+            name = m[2]
+            return date, name
+        raise ValueError(f'Formato inesperado: {title}')
 
     def download_offer(self) -> None:
         logger.debug('🚀 Downloading appointment offer file')

@@ -34,6 +34,7 @@
 320;Ámbito de comunicación: Lengua castellana y Literatura
 336;Operaciones y equipos de elaboración de productos alimentarios
 338;Operaciones de procesos
+340;Procesos de gestión administrativa
 342;Procesos en la industria alimentaria
 343;PIA Matadero: carnicería-charcutería
 344;PIA Elaboración de productos lácteos
@@ -119,8 +120,11 @@
 631;Ebanisteria
 632;Textiles artísticos
 651;Mantenimiento de vehículos
+652;Fabricación e instalación de carpintería y mueble
+654;Soldadura
 655;Peluquería
 656;Mecanizado y mantenimiento de máquinas
+658;Servicios de Restauración
 698;Bajo eléctrico (P)
 699;Guitarra eléctrica (P)
 701;Francés (EOI)

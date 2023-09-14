@@ -31,4 +31,6 @@ TELEGRAM_CHAT_ID = config('TELEGRAM_CHAT_ID')
 MSG_TEMPLATES_DIR = config('MSG_TEMPLATES_DIR', default=PROJECT_DIR / 'templates', cast=Path)
 APPOINTMENT_TMPL_NAME = config('APPOINTMENT_TMPL_NAME', default='appointment.jinja')
 
-NOTIFICATION_HASHTAG = config('NOTIFICATION_HASHTAG', default='#Personal')
+NOTIFICATION_HASHTAG = config(
+    'NOTIFICATION_HASHTAG', default='#Personal #OfertaExtraordinariaDePlazas'
+)

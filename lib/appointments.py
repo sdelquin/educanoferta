@@ -38,9 +38,8 @@ class Offer:
         logger.info('🧱 Building appointment offer')
 
         self.edugroup = edugroup
-        offer_link = node.h4.a
-        self.date, self.name = self._parse_title(offer_link.text)
-        self.url = utils.build_absolute_url(offer_link['href'])
+        self.date, self.name = self._parse_title(node.text)
+        self.url = utils.build_absolute_url(node['href'])
         logger.debug(f'🔵 {self.name}')
         logger.debug(f'{self.url}')
 
@@ -121,8 +120,15 @@ class EduGroup:
         self.offers = self.get_offers()
 
     def get_offers(self):
+        """
+        Estructura de una oferta de nombramiento:
+        ul
+         └─ li
+             └─ h4
+                 └─ a
+        """
         logger.info('Getting appointment offers')
-        for offer_node in reversed(self.soup.find_all('li', class_='enlace-con-icono documento')):
+        for offer_node in reversed(self.soup.select('ul.con-titulo>li.titulo-subapartado>h4>a')):
             try:
                 yield Offer(offer_node, self)
             except Exception as err:

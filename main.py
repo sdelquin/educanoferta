@@ -21,7 +21,7 @@ def run(
         'DEBUG', '--loglevel', '-l', help='Log level (debug, info, error)'
     ),
 ):
-    '''Notify educational appointment offers'''
+    """Notify educational appointment offers"""
 
     logger.setLevel(getattr(logzero, loglevel.upper()))
     manager = Manager()
@@ -30,14 +30,14 @@ def run(
 
 @app.command()
 def clean(force: bool = typer.Option(False, '--force', '-f', help='Force clean. No confirmation!')):
-    '''Clean archive database.'''
+    """Clean archive database."""
     if force or typer.confirm('Are you sure to delete archive database?'):
         for file_path in glob.glob(str(settings.ARCHIVE_DB_PATH) + '*'):
             os.remove(file_path)
         logger.info('🧽 DB is clean!')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     try:
         app()
     except Exception as err:

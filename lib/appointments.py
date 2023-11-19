@@ -44,9 +44,9 @@ class Offer:
         logger.debug(f'🔵 {self.name}')
         logger.debug(f'{self.url}')
 
-    def _parse_title(self, title: str) -> tuple[str]:
+    def _parse_title(self, title: str) -> tuple[str, str]:
         if m := re.fullmatch(r'(?:\[(\d{2}/\d{2}/\d{4})\])?\s*(.*)', title.strip()):
-            date = m[1] or datetime.date.today().strfmt('%d/%m/%Y')
+            date = m[1] or datetime.datetime.now().strftime('%d/%m/%Y')
             name = m[2]
             return date, name
         raise ValueError(f'Formato inesperado: {title}')

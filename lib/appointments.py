@@ -41,14 +41,40 @@ class Offer:
         self.date, self.name = self._parse_title(node.text)
         self.url = utils.build_absolute_url(node['href'])
         logger.debug(f'🔵 {self.name}')
+        logger.debug(f'{self.fdate}')
         logger.debug(f'{self.url}')
 
-    def _parse_title(self, title: str) -> tuple[str, str]:
+    def _parse_title(self, title: str) -> tuple[datetime.date, str]:
         if m := re.fullmatch(r'(?:\[(\d{2}/\d{2}/\d{4})\])?\s*(.*)', title.strip()):
-            date = m[1] or datetime.datetime.now().strftime('%d/%m/%Y')
+            if offer_date := m[1]:
+                date = datetime.datetime.strptime(offer_date, '%d/%m/%Y').date()
+            else:
+                date = datetime.date.today()
             name = m[2]
             return date, name
         raise ValueError(f'Formato inesperado: {title}')
+
+    @property
+    def already_dispatched(self) -> bool:
+        return self.archive.get(self.id) is not None
+
+    @property
+    def launched_today(self) -> bool:
+        return self.date == datetime.date.today()
+
+    @property
+    def id(self) -> str:
+        return self.url
+
+    @property
+    def as_markdown(self) -> str:
+        return utils.render_message(
+            settings.APPOINTMENT_TMPL_NAME, offer=self, hashtag=settings.NOTIFICATION_HASHTAG
+        )
+
+    @property
+    def fdate(self) -> str:
+        return self.date.strftime('%d/%m/%Y')
 
     def download_offer(self) -> None:
         logger.debug('🚀 Downloading appointment offer file')
@@ -79,20 +105,6 @@ class Offer:
                 logger.debug(f'✨ Adding speciality "{speciality}"')
                 self.specialities.append(speciality)
         self.specialities.sort()
-
-    @property
-    def already_dispatched(self) -> bool:
-        return self.archive.get(self.id) is not None
-
-    @property
-    def id(self) -> str:
-        return self.url
-
-    @property
-    def as_markdown(self) -> str:
-        return utils.render_message(
-            settings.APPOINTMENT_TMPL_NAME, offer=self, hashtag=settings.NOTIFICATION_HASHTAG
-        )
 
     def save(self) -> None:
         logger.debug('💾 Saving appointment offer')
@@ -161,6 +173,8 @@ class Manager:
             for offer in edugroup:
                 if offer.already_dispatched:
                     logger.warning('🚫 Offer already dispatched. Discarding!')
+                elif not offer.launched_today:
+                    logger.warning('🕒 Offer not launched today. Discarding!')
                 else:
                     offer.download_offer()
                     offer.extract_specialities()

@@ -49,10 +49,10 @@ class Offer:
             if offer_date := m[1]:
                 date = datetime.datetime.strptime(offer_date, '%d/%m/%Y').date()
             else:
-                date = datetime.date.today()
+                raise ValueError(f'Unexpected title format: {title}')
             name = m[2]
             return date, name
-        raise ValueError(f'Formato inesperado: {title}')
+        raise ValueError(f'Unexpected title format: {title}')
 
     @property
     def already_dispatched(self) -> bool:
@@ -139,8 +139,10 @@ class EduGroup:
              └─ h4
                  └─ a
         """
-        logger.info('Getting appointment offers')
-        for offer_node in reversed(self.soup.select('ul.con-titulo>li.titulo-subapartado>h4>a')):
+        logger.info('👀 Getting appointment offers')
+        for offer_node in reversed(
+            self.soup.select('ul.con-titulo>li.enlace-con-icono.documento>h4>a')
+        ):
             try:
                 yield Offer(offer_node, self)
             except Exception as err:

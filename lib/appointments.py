@@ -10,6 +10,7 @@ import PyPDF2
 import requests
 from bs4 import BeautifulSoup
 from logzero import logger
+from slugify import slugify
 
 import settings
 from lib import db, utils
@@ -23,7 +24,7 @@ class Speciality:
 
     def __lt__(self, other):
         if isinstance(other, Speciality):
-            return self.name < other.name
+            return slugify(self.name) < slugify(other.name)
         return False
 
     def __repr__(self):

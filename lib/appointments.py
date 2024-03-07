@@ -23,7 +23,7 @@ class Speciality:
 
     def __lt__(self, other):
         if isinstance(other, Speciality):
-            return self.code < other.code
+            return self.name < other.name
         return False
 
     def __repr__(self):

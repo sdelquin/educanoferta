@@ -134,16 +134,34 @@ class EduGroup:
 
     def get_offers(self):
         """
-        Estructura de una oferta de nombramiento:
+        Estructura de una oferta para nombramiento:
         ul
          └─ li
              └─ h4
                  └─ a
         """
+
+        def date_as_tuple(node: bs4.element.Tag) -> tuple[str, str, str]:
+            try:
+                title = node['title']
+                if m := re.match(r'\[(?P<day>\d+)/(?P<month>\d+)/(?P<year>\d+)\]', title):
+                    return m['year'], m['month'], m['day']
+            except Exception as err:
+                logger.exception(err)
+            return '', '', ''
+
+        OFFER_SELECTORS = [
+            'ul.con-titulo>li.enlace-con-icono.documento>h4>a',
+            'ul.con-titulo>li.titulo-subapartado>h4>a',
+        ]
+
         logger.info('👀 Getting appointment offers')
-        for offer_node in reversed(
-            self.soup.select('ul.con-titulo>li.enlace-con-icono.documento>h4>a')
-        ):
+
+        offer_nodes = []
+        for offer_selector in OFFER_SELECTORS:
+            offer_nodes.extend(self.soup.select(offer_selector))
+
+        for offer_node in sorted(offer_nodes, key=date_as_tuple):
             try:
                 yield Offer(offer_node, self)
             except Exception as err:

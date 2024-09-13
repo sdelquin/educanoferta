@@ -40,7 +40,7 @@
 343;PIA Matadero: carnicería-charcutería
 344;PIA Elaboración de productos lácteos
 345;PIA Elaboración de vinos y otras bebidas
-346;Operaciones y Equipos de Producción Agraria
+346;Operaciones y equipos de producción agraria
 347;Oficinas de proyectos de construcción
 348;Instalaciones electrotécnicas
 349;Equipos electrónicos
@@ -51,6 +51,7 @@
 355;Instalación y mantenimiento de equipos térmicos y de fluidos
 356;Laboratorio
 357;Procedimientos sanitarios y asistenciales
+358;Servicios a la comunidad
 359;Procedimientos de diagnóstico clínico y ortoprotésico
 360;Administración de empresas
 361;Procesos de Producción Agraria
@@ -234,7 +235,7 @@
 834;Piano
 835;Piano acompañante
 836;Saxofón
-337;Lenguaje musical
+837;Lenguaje musical
 839;Trombón
 840;Trompa
 841;Trompeta

@@ -17,4 +17,6 @@ jobs:
           host: sdelquin.me
           username: ${{ secrets.PRODUCTION_SSH_USERNAME }}
           key: ${{ secrets.PRODUCTION_SSH_KEY }}
-          script: ~/code/educanoferta/deploy.sh
+          script: |
+            export PATH=$PATH:~/.local/bin
+            cd ~/code/educanoferta && just deploy

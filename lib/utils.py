@@ -4,6 +4,7 @@ from pathlib import Path
 
 import jinja2
 import logzero
+from telegramtk.utils import escape_markdown as em
 
 import settings
 
@@ -39,7 +40,9 @@ def init_logger():
 @functools.cache
 def init_jinja():
     loader = jinja2.FileSystemLoader(settings.MSG_TEMPLATES_DIR)
-    return jinja2.Environment(loader=loader)
+    env = jinja2.Environment(loader=loader)
+    env.filters['escape'] = lambda s: em(s) if isinstance(s, str) else em(str(s))
+    return env
 
 
 def render_message(template_name: Path, **args) -> str:

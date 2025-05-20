@@ -1,0 +1,21 @@
+[project]
+name = "educanoferta"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "bs4>=0.0.2",
+    "jinja2>=3.1.6",
+    "logzero>=1.7.0",
+    "prettyconf>=2.3.0",
+    "pypdf2>=3.0.1",
+    "python-slugify>=8.0.4",
+    "requests>=2.32.3",
+    "telegramtk>=0.1.0",
+    "typer>=0.15.4",
+]
+
+[dependency-groups]
+dev = [
+    "ipython>=9.2.0",
+    "pytest>=8.3.5",
+]

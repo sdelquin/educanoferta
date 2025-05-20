@@ -1,6 +1,7 @@
 import urllib.parse
 from pathlib import Path
 
+import telegramtk
 from prettyconf import config
 
 PROJECT_DIR = Path(__file__).parent
@@ -27,6 +28,7 @@ ARCHIVE_DB_PATH = config('ARCHIVE_DB_PATH', default=DATA_DIR / 'archive.dbm', ca
 
 TELEGRAM_BOT_TOKEN = config('TELEGRAM_BOT_TOKEN')
 TELEGRAM_CHAT_ID = config('TELEGRAM_CHAT_ID')
+telegramtk.init(TELEGRAM_BOT_TOKEN)
 
 MSG_TEMPLATES_DIR = config('MSG_TEMPLATES_DIR', default=PROJECT_DIR / 'templates', cast=Path)
 APPOINTMENT_TMPL_NAME = config('APPOINTMENT_TMPL_NAME', default='appointment.jinja')

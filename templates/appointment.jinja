@@ -1,6 +1,6 @@
-✨ {{offer.fdate}} {{hashtag}}
+✨ {{offer.fdate}} {{hashtag|escape}}
 
-[{{offer.edugroup}} - {{offer.name}}]({{offer.url}})
+[{{offer.edugroup|escape}} \- {{offer.name|escape}}]({{offer.url}})
 {% for speciality in offer.specialities -%}
-_{{speciality}}_
+_{{speciality|escape}}_
 {% endfor %}

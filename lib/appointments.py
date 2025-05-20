@@ -8,13 +8,13 @@ import tempfile
 import bs4
 import PyPDF2
 import requests
+import telegramtk
 from bs4 import BeautifulSoup
 from logzero import logger
 from slugify import slugify
 
 import settings
 from lib import db, utils
-from lib.notification import TelegramBot
 
 
 class Speciality:
@@ -33,7 +33,6 @@ class Speciality:
 
 class Offer:
     archive = shelve.open(settings.ARCHIVE_DB_PATH)
-    tgbot = TelegramBot()
 
     def __init__(self, node: bs4.element.Tag, edugroup: EduGroup):
         logger.info('🧱 Building appointment offer')
@@ -112,7 +111,7 @@ class Offer:
         self.archive[self.id] = True
 
     def notify(self, telegram_chat_id: str = settings.TELEGRAM_CHAT_ID) -> None:
-        self.tgbot.send(telegram_chat_id, self.as_markdown)
+        telegramtk.send_message(telegram_chat_id, self.as_markdown)
 
     def __str__(self):
         return self.name
